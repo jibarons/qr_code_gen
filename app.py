@@ -42,8 +42,8 @@ with placeholder.container():
 
   with credential:
     # input parameter for QR code
-    user = st.text_input("Enter username")
-    pwd = st.text_input("Enter password", type="password")
+    user = st.text_input("Enter username", placeholder = "Enter the username (e.g. 'myusername')")
+    pwd = st.text_input("Enter password", type="password", placeholder = "Enter the ODK key")
     edit = st.checkbox("Will user edit the data?", value=True)
     project = st.text_input("Enter project name", value="My Project")
     icon = st.text_input("Enter icon (one letter) for the project", value="P")
