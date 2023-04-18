@@ -1,2 +1,3 @@
-# qr_code_gen
-Generate QR codes to setup user account in ODK Collect App
+# QR Code Generator
+
+Streamlit App to generate QR codes to setup Kobo toolbox user accounts in ODK Collect App
