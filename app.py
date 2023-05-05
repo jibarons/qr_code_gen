@@ -32,8 +32,8 @@ def set_qr(user, pwd, edit = True, project = "Project", icon = "P", color = "#ff
   
 st.set_page_config(layout="wide")
 # Page Title
-st.title("QR Code Generator for InForm")
-st.subheader("User set-up in ODK Collect App trhouhg QR codes")
+st.title("QR Code Generator")
+st.subheader("QR codes for user set-up in ODK Collect App")
 
 placeholder = st.empty()
 with placeholder.container():
