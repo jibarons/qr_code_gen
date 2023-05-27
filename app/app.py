@@ -57,20 +57,23 @@ with placeholder.container():
       st.write("")
 
     with center:
-      # Set Project name as title for the QR
-      html_title = f"""<h2 style='text-align: center; color: {color};'>{project}({icon})</h2>"""
-      st.markdown(html_title, unsafe_allow_html=True)  
-      # Create QR code and save image
-      qr_code = set_qr(user, pwd, edit = edit, project = project, 
-                      icon = icon, color = color)
-      out = io.BytesIO()
-      qr_code.save(out, kind='png', light=None, scale=7)
-      # Output QR image
-      st.image(out)
-      # Output QR id to track changes
-      qr_id = re.sub("^.+\sat\s(.+).$", "\\1", str(qr_code)) # shortened string
-      html_id = f"""<h6 style='text-align: center;'>{qr_id}</h6>"""
-      st.markdown(html_id, unsafe_allow_html=True) 
+      if st.button('Generate QR', ):
+        # Set Project name as title for the QR
+        html_title = f"""<h2 style='text-align: center; color: {color};'>{project}({icon})</h2>"""
+        st.markdown(html_title, unsafe_allow_html=True)  
+        # Create QR code and save image
+        qr_code = set_qr(user, pwd, edit = edit, project = project, 
+                        icon = icon, color = color)
+        out = io.BytesIO()
+        qr_code.save(out, kind='png', light=None, scale=7)
+        # Output QR image
+        st.image(out)
+        # Output QR id to track changes
+        qr_id = re.sub("^.+\sat\s(.+).$", "\\1", str(qr_code)) # shortened string
+        html_id = f"""<h6 style='text-align: center;'>{qr_id}</h6>"""
+        st.markdown(html_id, unsafe_allow_html=True) 
+      else:
+        st.write("")
 
     with right:
       st.write("")
