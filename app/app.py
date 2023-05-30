@@ -12,7 +12,7 @@ import re
 def set_qr(user, pwd, edit = True, project = "Project", icon = "P", color = "#ff0000"):
   settings = {
     "general": {
-      "server_url": "https://data.inform.unicef.org",#"https://kc.kobotoolbox.org",
+      "server_url": "https://kc.kobotoolbox.org",
       "protocol": "odk_default",
       "username": user,
       "password": pwd
