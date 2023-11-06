@@ -1,5 +1,5 @@
 
-import streamlit as st  # data web app development
+import streamlit as st
 from base64 import b64encode
 import codecs
 import json
